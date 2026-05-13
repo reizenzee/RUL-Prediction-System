@@ -64,7 +64,7 @@ if nav_option == "Asset Prediction":
             "Condition Score",
             min_value=1.0,
             max_value=10.0,
-            value=0.0,
+            value=1.0,
             step=0.1
         )
     
@@ -81,7 +81,7 @@ if nav_option == "Asset Prediction":
             "Failure Impact Score",
             min_value=1,
             max_value=100,
-            value=0,
+            value=1,
             step=1
         )
     
@@ -117,7 +117,7 @@ if nav_option == "Asset Prediction":
             "Failure Probability",
             min_value=0.01,
             max_value=0.99,
-            value=0.0,
+            value=0.01,
             step=0.01
         )
     
@@ -129,7 +129,7 @@ if nav_option == "Asset Prediction":
             "Environmental Stress Index",
             min_value=0.1,
             max_value=1.0,
-            value=0.0,
+            value=0.1,
             step=0.1
         )
     

@@ -64,7 +64,7 @@ if nav_option == "Asset Prediction":
             "Condition Score",
             min_value=1.0,
             max_value=10.0,
-            value=5.0,
+            value=0.0,
             step=0.1
         )
     
@@ -72,7 +72,7 @@ if nav_option == "Asset Prediction":
         total_maintenance_cost = st.number_input(
             "Total Maintenance Cost ($)",
             min_value=0.0,
-            value=5000.0,
+            value=0.0,
             step=100.0
         )
     
@@ -81,7 +81,7 @@ if nav_option == "Asset Prediction":
             "Failure Impact Score",
             min_value=1,
             max_value=100,
-            value=50,
+            value=0,
             step=1
         )
     
@@ -92,7 +92,7 @@ if nav_option == "Asset Prediction":
         operating_hours = st.number_input(
             "Operating Hours",
             min_value=0,
-            value=10000,
+            value=0,
             step=100
         )
     
@@ -100,7 +100,7 @@ if nav_option == "Asset Prediction":
         failure_history_count = st.number_input(
             "Failure History Count",
             min_value=0,
-            value=1,
+            value=0,
             step=1
         )
     
@@ -108,7 +108,7 @@ if nav_option == "Asset Prediction":
         days_since_maintenance = st.number_input(
             "Days Since Maintenance",
             min_value=0,
-            value=180,
+            value=0,
             step=1
         )
     
@@ -117,7 +117,7 @@ if nav_option == "Asset Prediction":
             "Failure Probability",
             min_value=0.01,
             max_value=0.99,
-            value=0.50,
+            value=0.0,
             step=0.01
         )
     
@@ -129,7 +129,7 @@ if nav_option == "Asset Prediction":
             "Environmental Stress Index",
             min_value=0.1,
             max_value=1.0,
-            value=0.5,
+            value=0.0,
             step=0.1
         )
     
@@ -138,7 +138,7 @@ if nav_option == "Asset Prediction":
             "System Importance Score",
             min_value=0.0,
             max_value=1.0,
-            value=0.5,
+            value=0.0,
             step=0.1
         )
     
@@ -215,7 +215,7 @@ elif nav_option == "Batch Analysis":
         df = pd.read_csv(uploaded_file)
         
         st.markdown("### Preview")
-        st.dataframe(df.head(), use_container_width=True)
+        st.dataframe(df, use_container_width=True)
         
         if st.button("🔮 Predict for All Assets", use_container_width=True):
             try:
